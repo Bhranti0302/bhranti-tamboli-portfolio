@@ -2,8 +2,6 @@
    EDIT YOUR CONTENT HERE
    ===================================================== */
 
-// Certificates: put your image files in a "certificates" folder
-// and set each "img" to match the file name.
 var CERTS = [
   {
     title: "Professional Certification in Full Stack Web Development",
@@ -395,7 +393,6 @@ $("#projList").innerHTML = PROJECTS.map(function (p, i) {
     if (e.key === "ArrowRight") go(idx + 1);
   });
 
-  // swipe on touch screens and drag with a mouse
   var x0 = null;
   track.addEventListener("pointerdown", function (e) {
     x0 = e.clientX;
@@ -415,30 +412,6 @@ $("#projList").innerHTML = PROJECTS.map(function (p, i) {
   go(0);
   play();
 })();
-
-/* =====================================================
-   CONTACT FORM (Netlify Forms)
-   ===================================================== */
-$("#cf").addEventListener("submit", function (ev) {
-  ev.preventDefault();
-  var form = ev.target,
-    note = $("#note");
-  note.textContent = "Sending...";
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(new FormData(form)).toString(),
-  })
-    .then(function (r) {
-      if (!r.ok) throw new Error("Failed");
-      form.reset();
-      note.textContent = "Thanks! Your message was sent.";
-    })
-    .catch(function () {
-      note.textContent =
-        "Something went wrong. Please email me directly at bhrantitamboli40@gmail.com.";
-    });
-});
 
 /* =====================================================
    TYPING EFFECT
@@ -484,7 +457,6 @@ if (window.gsap && window.ScrollTrigger) {
   var mm = gsap.matchMedia();
 
   mm.add("(prefers-reduced-motion: no-preference)", function () {
-    // Hero intro
     gsap
       .timeline({ defaults: { ease: "power3.out" } })
       .from(".hero .eyebrow", { y: 16, opacity: 0, duration: 0.5 })
@@ -512,7 +484,6 @@ if (window.gsap && window.ScrollTrigger) {
         "-=0.5",
       );
 
-    // Floating tech chips
     gsap.utils.toArray(".chip").forEach(function (c, i) {
       gsap.to(c, {
         y: i % 2 ? 10 : -10,
@@ -523,7 +494,6 @@ if (window.gsap && window.ScrollTrigger) {
       });
     });
 
-    // Scroll reveals for headings, cards and blocks
     ScrollTrigger.batch(".reveal", {
       start: "top 88%",
       once: true,
@@ -539,7 +509,6 @@ if (window.gsap && window.ScrollTrigger) {
       },
     });
 
-    // Section labels slide in
     gsap.utils.toArray(".eyebrow.num").forEach(function (e) {
       gsap.from(e, {
         x: -24,
@@ -549,7 +518,6 @@ if (window.gsap && window.ScrollTrigger) {
       });
     });
 
-    // Timeline line draws as you scroll
     gsap.to(line, {
       scaleY: 1,
       ease: "none",
@@ -561,7 +529,6 @@ if (window.gsap && window.ScrollTrigger) {
       },
     });
 
-    // Skill tags pop in
     gsap.utils.toArray("#skillsGrid .card").forEach(function (card) {
       gsap.from(card.querySelectorAll(".tags li"), {
         y: 10,
@@ -572,7 +539,6 @@ if (window.gsap && window.ScrollTrigger) {
       });
     });
 
-    // Stats count-up
     var nums = [
       { el: $(".stats div:nth-child(1) b"), to: 2, suf: "+" },
       { el: $(".stats div:nth-child(3) b"), to: 3, suf: "" },
@@ -591,7 +557,6 @@ if (window.gsap && window.ScrollTrigger) {
       });
     });
 
-    // Project card hover lift and screenshot zoom
     gsap.utils.toArray(".proj").forEach(function (card) {
       var shot = card.querySelector(".shot > *");
       card.addEventListener("mouseenter", function () {
@@ -612,7 +577,6 @@ if (window.gsap && window.ScrollTrigger) {
       });
     });
 
-    // Button hover
     gsap.utils.toArray(".btn").forEach(function (b) {
       b.addEventListener("mouseenter", function () {
         gsap.to(b, { y: -2, duration: 0.2 });
