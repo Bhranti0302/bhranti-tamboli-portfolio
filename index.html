@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bhranti Tamboli | Frontend Developer, React.js & MERN Stack</title>
+    <meta
+      name="description"
+      content="Portfolio of Bhranti Tamboli, a Frontend Developer in Navsari, Gujarat building React.js interfaces and MERN stack applications."
+    />
+    <meta property="og:title" content="Bhranti Tamboli | Frontend Developer" />
+    <meta
+      property="og:description"
+      content="React.js and MERN stack projects: CareSync, Trendor and Natours."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <a class="logo" href="#top"><b>BT</b> Bhranti Tamboli</a>
+        <ul class="links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="actions">
+          <button
+            id="theme"
+            class="icon"
+            type="button"
+            aria-label="Switch color theme"
+          >
+            ☾</button
+          ><a class="btn primary sm" href="resume.pdf" download
+            >Download Resume</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="wrap two">
+          <div>
+            <p class="eyebrow">Hello, I'm</p>
+            <h1 id="name">Bhranti Tamboli</h1>
+            <p class="typed">
+              I'm a <em id="typed">React.js Developer</em
+              ><span class="cursor">|</span>
+            </p>
+            <p class="sm-role">Frontend Developer | React.js | MERN Stack</p>
+            <p class="lead">
+              I build responsive React interfaces and the Node.js APIs behind
+              them, across healthcare, e-commerce and tour booking.
+            </p>
+            <div class="btns">
+              <a class="btn primary" href="#projects">View Projects</a
+              ><a class="btn" href="#contact">Contact Me</a>
+            </div>
+            <p class="loc">📍 Navsari, Gujarat, India</p>
+          </div>
+          <div class="arch-wrap">
+            <div class="arch">
+              <img
+                src="./images/profile_img.jpeg"
+                alt="Portrait of Bhranti Tamboli"
+                width="300"
+                height="370"
+                onerror="this.remove()"
+              /><span>BT</span><small>Frontend Developer</small>
+            </div>
+            <i class="chip c1">React.js</i><i class="chip c2">Node.js</i
+            ><i class="chip c3">MongoDB</i>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="wrap">
+          <p class="eyebrow num">01 <u></u> About</p>
+          <h2 class="reveal">A developer who likes things to just work.</h2>
+          <div class="about">
+            <div class="arch small reveal">
+              <img
+                src="./images/profile_img.jpeg"
+                alt="Portrait of Bhranti Tamboli"
+                width="250"
+                height="310"
+                loading="lazy"
+                onerror="this.remove()"
+              /><span>BT</span><small>Frontend Developer</small>
+            </div>
+            <div class="reveal">
+              <p>
+                Hi, I'm Bhranti, a frontend developer based in Navsari, Gujarat.
+                I spent two years at August Infotech in Surat turning designs
+                into clean, responsive React.js interfaces.
+              </p>
+              <p>
+                Since February 2024 I've been building MERN stack applications
+                on my own: React front ends, Node.js and Express.js REST APIs,
+                and MongoDB, with JWT authentication, role-based access and
+                Stripe payments.
+              </p>
+              <p>
+                My projects so far span healthcare, e-commerce and tour booking.
+              </p>
+              <div class="pills">
+                <span>📍 Navsari, Gujarat, India</span><span>Healthcare</span
+                ><span>E-commerce</span><span>Tour booking</span>
+              </div>
+              <div class="stats">
+                <div><b>2+</b>Years of experience</div>
+                <div><b>Feb 2024</b>Independent MERN development</div>
+                <div><b>3</b>Projects showcased</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="alt">
+        <div class="wrap">
+          <p class="eyebrow num">02 <u></u> Skills</p>
+          <h2 class="reveal">What I work with.</h2>
+          <p class="sub reveal">
+            From the interface to the API and the database behind it.
+          </p>
+          <div class="grid2" id="skillsGrid"></div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="wrap">
+          <p class="eyebrow num">03 <u></u> Experience</p>
+          <h2 class="reveal">Where I've been building.</h2>
+          <ol class="tl" id="tl"></ol>
+        </div>
+      </section>
+
+      <section id="projects" class="alt">
+        <div class="wrap">
+          <p class="eyebrow num">04 <u></u> Projects</p>
+          <h2 class="reveal">Selected work.</h2>
+          <p class="sub reveal">
+            Three projects across healthcare, e-commerce and tour booking.
+          </p>
+          <div id="projList"></div>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="wrap">
+          <p class="eyebrow num">05 <u></u> Education &amp; Certifications</p>
+          <h2 class="reveal">Always learning.</h2>
+          <div class="edu">
+            <article class="card reveal">
+              <span class="ico">🎓</span>
+              <p class="yr">2018 – 2022</p>
+              <h3>Bachelor of Engineering in Computer Engineering</h3>
+              <p class="muted">
+                S. S. Agrawal Institute of Engineering &amp; Technology
+              </p>
+            </article>
+            <div class="card reveal">
+              <h3 class="ch">Certifications</h3>
+              <div id="carousel"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="alt">
+        <div class="wrap">
+          <p class="eyebrow num">06 <u></u> Contact</p>
+          <h2 class="reveal">Let's work together.</h2>
+          <p class="sub reveal">
+            Have a role or project in mind? Send me a message and I'll get back
+            to you.
+          </p>
+          <div class="contact">
+            <ul class="cl reveal">
+              <li>
+                <span class="ico">✉</span>
+                <div>
+                  <small>Email</small
+                  ><a href="mailto:bhrantitamboli40@gmail.com"
+                    >bhrantitamboli40@gmail.com</a
+                  >
+                </div>
+              </li>
+              <li>
+                <span class="ico">☎</span>
+                <div>
+                  <small>Phone</small><a href="tel:+918153913384">8153913384</a>
+                </div>
+              </li>
+              <li>
+                <span class="ico">in</span>
+                <div>
+                  <small>LinkedIn</small
+                  ><a
+                    href="https://linkedin.com/in/bhranti-tamboli"
+                    target="_blank"
+                    rel="noopener"
+                    >linkedin.com/in/bhranti-tamboli</a
+                  >
+                </div>
+              </li>
+              <li>
+                <span class="ico">⌥</span>
+                <div>
+                  <small>GitHub</small
+                  ><a
+                    href="https://github.com/Bhranti0302"
+                    target="_blank"
+                    rel="noopener"
+                    >github.com/Bhranti0302</a
+                  >
+                </div>
+              </li>
+            </ul>
+            <form
+              id="cf"
+              class="card reveal"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p hidden>
+                <label>Don't fill this out: <input name="bot-field" /></label>
+              </p>
+              <div class="row">
+                <label
+                  >Name<input
+                    name="name"
+                    placeholder="Your name"
+                    required
+                    autocomplete="name" /></label
+                ><label
+                  >Email<input
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    required
+                    autocomplete="email"
+                /></label>
+              </div>
+              <label
+                >Message<textarea
+                  name="message"
+                  placeholder="Tell me a little about the role or project"
+                  required
+                ></textarea>
+              </label>
+              <button class="btn primary" type="submit">Send Message</button>
+              <p id="note" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap foot">
+        <span>© 2026 Bhranti Tamboli. All rights reserved.</span
+        ><a class="btn sm" href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
