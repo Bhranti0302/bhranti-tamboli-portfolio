@@ -1,7 +1,3 @@
-/* =====================================================
-   EDIT YOUR CONTENT HERE
-   ===================================================== */
-
 var CERTS = [
   {
     title: "Professional Certification in Full Stack Web Development",
@@ -412,6 +408,38 @@ $("#projList").innerHTML = PROJECTS.map(function (p, i) {
   go(0);
   play();
 })();
+
+/* =====================================================
+   CONTACT FORM (Netlify Forms via AJAX)
+   ===================================================== */
+var contactForm = $("#cf");
+if (contactForm) {
+  contactForm.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var form = ev.target,
+      note = $("#note");
+
+    note.textContent = "Sending...";
+
+    var formData = new FormData(form);
+    formData.append("form-name", "contact");
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(function (r) {
+        if (!r.ok) throw new Error("Failed");
+        form.reset();
+        note.textContent = "Thanks! Your message was sent successfully.";
+      })
+      .catch(function () {
+        note.textContent =
+          "Something went wrong. Please email me directly at bhrantitamboli40@gmail.com.";
+      });
+  });
+}
 
 /* =====================================================
    TYPING EFFECT
